@@ -162,7 +162,7 @@ Loading...
 
 <div class="music">
 <audio id="bgmusic" controls autoplay loop>
-<source src="music.mp3">
+<source src="music.mp3" type="audio/mpeg">
 </audio>
 </div>
 
@@ -209,10 +209,10 @@ I just hope one day our first meeting becomes one of our favorite memories. Unti
 
 
 <script>
-    document.addEventListener("click", function() {
-document.getElementById("bgmusic").play();
-},{once:true});
-
+    document.body.addEventListener("click", function () {
+   let music = document.getElementById("bgmusic");
+   music.play();
+}, { once: true });
 const countDate=new Date("June 5, 2026 00:00:00").getTime();
 
 setInterval(function(){
