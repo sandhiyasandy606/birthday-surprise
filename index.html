@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday My Love ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#ff9a9e,#fad0c4,#fad0c4);
+overflow-x:hidden;
+color:white;
+text-align:center;
+}
+
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+padding:20px;
+position:relative;
+}
+
+.hero img{
+width:230px;
+height:230px;
+border-radius:50%;
+object-fit:cover;
+border:6px solid white;
+box-shadow:0 0 30px rgba(255,255,255,.7);
+margin-bottom:20px;
+animation:float 3s infinite ease-in-out;
+}
+
+@keyframes float{
+0%,100%{
+transform:translateY(0px);
+}
+50%{
+transform:translateY(-15px);
+}
+}
+
+h1{
+font-family:'Dancing Script',cursive;
+font-size:55px;
+}
+
+p{
+font-size:18px;
+padding:10px;
+max-width:600px;
+}
+
+.countdown{
+margin-top:20px;
+font-size:28px;
+font-weight:bold;
+background:rgba(255,255,255,.2);
+padding:15px 30px;
+border-radius:30px;
+backdrop-filter:blur(10px);
+}
+
+.section{
+padding:80px 20px;
+}
+
+.gallery{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:20px;
+margin-top:30px;
+}
+
+.gallery img{
+width:250px;
+height:300px;
+object-fit:cover;
+border-radius:20px;
+border:4px solid white;
+transition:.5s;
+}
+
+.gallery img:hover{
+transform:scale(1.08);
+}
+
+.message{
+background:rgba(255,255,255,.15);
+margin:auto;
+padding:30px;
+max-width:800px;
+border-radius:25px;
+backdrop-filter:blur(10px);
+line-height:1.8;
+}
+
+.hearts span{
+position:fixed;
+bottom:-100px;
+font-size:30px;
+animation:animate 10s linear infinite;
+}
+
+@keyframes animate{
+0%{
+transform:translateY(0);
+opacity:1;
+}
+100%{
+transform:translateY(-120vh);
+opacity:0;
+}
+}
+
+.music{
+margin-top:30px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="hearts">
+<span style="left:5%;animation-delay:0s">❤️</span>
+<span style="left:20%;animation-delay:3s">💖</span>
+<span style="left:35%;animation-delay:6s">💕</span>
+<span style="left:50%;animation-delay:2s">❤️</span>
+<span style="left:65%;animation-delay:8s">💖</span>
+<span style="left:80%;animation-delay:4s">💕</span>
+<span style="left:95%;animation-delay:1s">❤️</span>
+</div>
+
+<section class="hero">
+
+<img src="WhatsApp Image 2026-05-19 at 12.07.43 AM.jpeg">
+
+<h1>Happy Birthday My Love ❤️</h1>
+
+<p>
+To the most special person in my life....✨  
+You make my world brighter and my heart happier.
+</p>
+
+<div class="countdown" id="timer">
+Loading...
+</div>
+
+<div class="music">
+<audio id="bgmusic" controls autoplay loop>
+<source src="music.mp3">
+</audio>
+</div>
+
+</section>
+
+
+<section class="section">
+
+<h1>you and me🫂💋</h1>
+
+<div class="gallery">
+
+<img src="WhatsApp Image 2026-05-19 at 12.13.20 AM.jpeg">
+<img src="WhatsApp Image 2026-05-19 at 12.14.47 AM.jpeg">
+<img src="WhatsApp Image 2026-05-19 at 12.16.51 AM.jpeg">
+<img src="WhatsApp Image 2026-05-19 at 12.18.31 AM.jpeg">
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<div class="message">
+
+<h1>Message For You 💌</h1>
+
+<p>
+Happy Birthday, Babyyy ❤️
+
+It still feels funny and beautiful how we haven't met even once in person, yet you somehow became such a special part of my life. We may not officially be in a relationship, but the way we talk, care, and stay for each other already feels different… feels special.
+
+Everything between us started through calls, screens, and little moments, but somehow those moments became my favorite part of the day. Distance never stopped me from feeling close to you.
+
+Maybe we haven't met yet, maybe our story is still incomplete, but I’m thankful for every call, every laugh, every late-night conversation, and every feeling you gave me.
+
+I just hope one day our first meeting becomes one of our favorite memories. Until then… stay happy, keep smiling, and remember that you’re already very special to me. ❤️
+</p>
+
+</div>
+
+</section>
+
+
+<script>
+    document.addEventListener("click", function() {
+document.getElementById("bgmusic").play();
+},{once:true});
+
+const countDate=new Date("June 5, 2026 00:00:00").getTime();
+
+setInterval(function(){
+
+let now=new Date().getTime();
+
+let gap=countDate-now;
+
+let days=Math.floor(gap/(1000*60*60*24));
+let hours=Math.floor((gap%(1000*60*60*24))/(1000*60*60));
+let minutes=Math.floor((gap%(1000*60*60))/(1000*60));
+let seconds=Math.floor((gap%(1000*60))/1000);
+
+document.getElementById("timer").innerHTML=
+days+" Days "+hours+" Hrs "+minutes+" Min "+seconds+" Sec";
+
+},1000);
+
+</script>
+
+</body>
+</html>
